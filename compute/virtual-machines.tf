@@ -12,7 +12,7 @@ resource "aws_instance" "p1" {
   private_ip ="10.123.112.20"
   user_data = <<-EOF
               #!/bin/bash
-              bash /tmp/aquis.sh
+              bash /tmp/file.sh
               EOF
   tags = {
     Name = "control-1"
@@ -31,7 +31,7 @@ resource "aws_instance" "p2" {
   private_ip ="10.123.112.51"
   user_data = <<-EOF
               #!/bin/bash
-              bash /tmp/aquis.sh
+              bash /tmp/file.sh
               EOF
   tags = {
     Name = "processor-1"
@@ -50,7 +50,7 @@ resource "aws_instance" "p3" {
   private_ip ="10.123.112.52"
   user_data = <<-EOF
               #!/bin/bash
-              bash /tmp/aquis.sh
+              bash /tmp/file.sh
               EOF
   tags = {
     Name = "processor-2"
@@ -69,7 +69,7 @@ resource "aws_instance" "p4" {
   private_ip ="10.123.112.53"
   user_data = <<-EOF
               #!/bin/bash
-              bash /tmp/aquis.sh
+              bash /tmp/file.sh
               EOF
   tags = {
     Name = "processor-3"
