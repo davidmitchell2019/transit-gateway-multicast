@@ -22,7 +22,7 @@ def create_transit_gateway():
                 'Tags': [
                     {
                         'Key': 'Name',
-                        'Value': 'aquis-terraform-boto3-tgw'
+                        'Value': 'terraform-boto3-tgw'
                     },
                 ]
             },
@@ -51,7 +51,7 @@ def create_transit_gateway_vpc_attachment(transit_gateway_id, vpc_id, subnet_id)
                 'Tags': [
                     {
                         'Key': 'Name',
-                        'Value': 'aquis-terraform-boto3-tgw-attachment'
+                        'Value': 'terraform-boto3-tgw-attachment'
                     },
                 ]
             },
@@ -71,7 +71,7 @@ def create_transit_gateway_rt(transit_gateway_id):
                 'Tags': [
                     {
                         'Key': 'Name',
-                        'Value': 'aquis-terraform-boto3-tgw-rtable'
+                        'Value': 'terraform-boto3-tgw-rtable'
                     },
                 ]
             },
