@@ -6,7 +6,7 @@ resource "aws_security_group" "allow_ssh" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["185.23.232.0/22"]
+    cidr_blocks = [""]
   }
   ingress {
     from_port   = 0
