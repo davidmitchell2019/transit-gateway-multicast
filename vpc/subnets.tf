@@ -6,6 +6,6 @@ resource "aws_subnet" "transit-gateway-subnet" {
   map_public_ip_on_launch = "true"
 
   tags = {
-    Name = "aquis-terraform-boto3-transit-gateway-subnet"
+    Name = "terraform-boto3-transit-gateway-subnet"
   }
 }
