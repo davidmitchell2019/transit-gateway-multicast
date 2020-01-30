@@ -8,7 +8,7 @@ resource "aws_route_table" "r" {
   }
 
   tags = {
-    Name = "aquis-terraform-boto3-transit-gateway-rt"
+    Name = "terraform-boto3-transit-gateway-rt"
   }
 }
 resource "aws_main_route_table_association" "a" {
