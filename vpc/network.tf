@@ -4,6 +4,6 @@ resource "aws_vpc" "transit-gateway-vpc" {
   enable_dns_hostnames = "false"
   //instance_tenancy = "dedicated"
   tags = {
-    Name = "aquis-terraform-boto3-transit-gateway-vpc"
+    Name = "terraform-boto3-transit-gateway-vpc"
   }
 }
