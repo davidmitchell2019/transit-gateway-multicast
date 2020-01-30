@@ -110,6 +110,7 @@ def enable_transit_gateway_route_table_propagation(tgw_rt_id, tgw_att_id):
         TransitGatewayAttachmentId= tgw_att_id,
         DryRun=False
     )
+    return response
 
 #Create transit gateway multi-cast domain
 def create_transit_gateway_multicast_domain(transit_gateway_id):
@@ -169,6 +170,7 @@ def delete_transit_gateway(transit_gateway_id):
         TransitGatewayId=transit_gateway_id,
         DryRun=False
     )
+    return response
 
 # dissacotiate transit gateway multicast domain
 def disassociate_transit_gateway_multicast_domain(tgw_multicast_domain_id, tgw_attachment_id, subnet_id):
@@ -181,6 +183,8 @@ def disassociate_transit_gateway_multicast_domain(tgw_multicast_domain_id, tgw_a
         ],
         DryRun=False
     )
+    return response
+
 #register transit gateway multi-cast members
 def register_transit_gateway_multicast_group_members(tgw_multicast_domain_id, group_address, network_interface3, network_interface4):
     client = boto3.client('ec2', region_name='us-east-1')
@@ -194,6 +198,7 @@ def register_transit_gateway_multicast_group_members(tgw_multicast_domain_id, gr
     )
     return response
 
+#register transit gateway multi cast group sources
 def register_transit_gateway_multicast_group_sources(tgw_multicast_domain_id, nic1id, group_address):
     client = boto3.client('ec2', region_name='us-east-1')
     response = client.register_transit_gateway_multicast_group_sources(
@@ -205,6 +210,7 @@ def register_transit_gateway_multicast_group_sources(tgw_multicast_domain_id, ni
         DryRun=False
     )
     return response
+
 #Delete transit gateway route table
 def delete_transit_gateway_route_table(rtb_id):
     client = boto3.client('ec2', region_name='us-east-1')
@@ -212,6 +218,7 @@ def delete_transit_gateway_route_table(rtb_id):
         TransitGatewayRouteTableId=rtb_id,
         DryRun=False
     )
+    return response
 
 if __name__ == '__main__':
     action = sys.argv[1]
